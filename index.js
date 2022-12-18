@@ -1,18 +1,6 @@
- var express = require('express');
-    var https = require('https');
-    var fs = require('fs');
-
-    var options = {
-    };
-
-    app = express()
-
-    app.get('/', function(req,res) {
-        res.send('hello');
-    });
-
-    var server = https.createServer(options, app);
-
-    server.listen(8001, function(){
-        console.log("server running at https://IP_ADDRESS:8001/")
-    });
+var http = require('http');
+http.createServer(function (req, res) {
+    console.log(`Just got a request at ${req.url}!`)
+    res.write('Yo!');
+    res.end();
+}).listen(process.env.PORT || 3000);
