@@ -3,9 +3,6 @@
     var fs = require('fs');
 
     var options = {
-      ca: [fs.readFileSync(PATH_TO_BUNDLE_CERT_1), fs.readFileSync(PATH_TO_BUNDLE_CERT_2)],
-      cert: fs.readFileSync(PATH_TO_CERT),
-      key: fs.readFileSync(PATH_TO_KEY)
     };
 
     app = express()
